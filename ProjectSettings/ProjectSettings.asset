@@ -767,7 +767,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Standalone: BASIC_CONDITION_BEHAVIORS;VR_BUILDER;VR_BUILDER_ENABLE_XR_INTERACTION;BASIC_INTERACTION;BASIC_UI;VR_BUILDER_XR_INTERACTION
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
