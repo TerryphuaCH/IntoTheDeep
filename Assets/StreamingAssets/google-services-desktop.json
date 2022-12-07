@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "546127168062",
+    "firebase_url": "https://dda-itd-base-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "dda-itd-base",
+    "storage_bucket": "dda-itd-base.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546127168062:android:e0dc5cd973fe9a6ff5c76f",
+        "android_client_info": {
+          "package_name": "com.ddaitd.base"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546127168062-erk0cnlbl85uktaitm8f5okqjlrh4tql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvzz5bwq2E3r_dyJ5PQIHPk_KUas3p208"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546127168062-erk0cnlbl85uktaitm8f5okqjlrh4tql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
