@@ -7,6 +7,7 @@ TagManager:
   - RoomLight
   - Right
   - Left
+  - collect
   layers:
   - Default
   - TransparentFX
