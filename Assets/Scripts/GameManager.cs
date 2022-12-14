@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+
+
+
+
     public void OnHover()
     {
         Debug.Log("Object inside cage");
