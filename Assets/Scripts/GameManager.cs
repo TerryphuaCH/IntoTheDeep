@@ -7,51 +7,45 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //public AuthManager auth;
-    public GameObject panel;
-    [SerializeField] TextMeshProUGUI timeText;
-    [SerializeField] float duration, currentTime;
-    public TextMeshProUGUI ClicksTotalText;
-    int TotalClicks;
-
-    //public SimpleFirebaseManager firebaseMrg;
-    //public bool isPlayerStatUpdated;
-
-    public void Start()
+    public void OnHover()
     {
-        //isPlayerStatUpdated = false;
-        panel.SetActive(false);
-        currentTime = duration;
-        timeText.text = currentTime.ToString();
-        StartCoroutine(TimeIEn());
-    }
+        Debug.Log("Object inside cage");
 
-    IEnumerator TimeIEn()
-    {
-        while (currentTime >= 0)
+        //Look through all children and stre any Mesh Renderers in the meshRenderer array.
+        MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
+
+        //Use a looop to iterate through the meshRenderers array.
+        foreach (MeshRenderer renderer in meshRenderers)
         {
-            timeText.text = currentTime.ToString();
-            yield return new WaitForSeconds(1f);
-            currentTime--;
+            //Enable emission property of each renderer's material.
+            renderer.material.EnableKeyword("_EMISSION");
         }
-        //OpenPanel();
     }
 
-    //void OpenPanel()
-   // {
-      //  if (!isPlayerStatUpdated)
-    //    {
-    //        UpdatePlayerStat(this.TotalClicks);//
-    //    }
-   //     isPlayerStatUpdated = true;
-    //    timeText.text = "";
-   //     panel.SetActive(true);
-  //  }
+    public void ExitHover()
+    {
 
-    //public void UpdatePlayerStat(int score)
-    //{
-       // firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, score, auth.GetCurentUserDisplayName());
-    //}
+        Debug.Log("Object Not inside cage");
+        //Look through all children and stre any Mesh Renderers in the meshRenderer array.
+        MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
+
+        //Use a looop to iterate through the meshRenderers array.
+        foreach (MeshRenderer renderer in meshRenderers)
+        {
+            //Disable emission property of each renderer's material.
+            renderer.material.DisableKeyword("_EMISSION");
+        }
+    }
+
+    public void playSound()
+    {
+        Debug.Log("sound played");
+    }
+
+    public void stopplaySound()
+    {
+        Debug.Log("stop sound played");
+    }
 
 
     public void RestartGame()
@@ -59,13 +53,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void AddClicks()
-    {
-        TotalClicks++;
-        ClicksTotalText.text = TotalClicks.ToString("0");
-    }
-
-    public void SwitchSceneToMain()
+    public void SwitchSceneToGame()
     {
         SceneManager.LoadScene(1);
     }
