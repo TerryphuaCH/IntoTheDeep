@@ -153,7 +153,7 @@ public class OVRPlayerController : MonoBehaviour
 
 	private float MoveScale = 1.0f;
 	private Vector3 MoveThrottle = Vector3.zero;
-	private float FallSpeed = 0.0f;
+	public float FallSpeed = 0.0f;
 	private OVRPose? InitialPose;
 	public float InitialYRotation { get; private set; }
 	private float MoveScaleMultiplier = 1.0f;
@@ -369,10 +369,10 @@ public class OVRPlayerController : MonoBehaviour
 				MoveScale = 0.70710678f;
 
 			// No positional movement if we are in the air
-			if (!Controller.isGrounded)
+/*			if (!Controller.isGrounded)
 				MoveScale = 0.0f;
 
-			MoveScale *= SimulationRate * Time.deltaTime;
+			MoveScale *= SimulationRate * Time.deltaTime;*/
 
 			// Compute this for key movement
 			float moveInfluence = Acceleration * 0.1f * MoveScale * MoveScaleMultiplier;

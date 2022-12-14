@@ -8,6 +8,8 @@ public class InteractableHighlight : MonoBehaviour
 
     public void OnHover()
     {
+        Debug.Log("test");
+
         //Look through all children and stre any Mesh Renderers in the meshRenderer array.
         MeshRenderer[] meshRenderers = GetComponentsInChildren<MeshRenderer>();
 
