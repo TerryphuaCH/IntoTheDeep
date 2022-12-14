@@ -194,7 +194,7 @@ public class AuthManagers : MonoBehaviour
                     }
                     else
                     {
-                        UIManager.instance.LoginScreen();
+                        //UIManager.instance.LoginScreen();
                         warningRegisterText.text = "";
                     }
                 }
