@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "546127168062",
-    "firebase_url": "https://dda-itd-base-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "dda-itd-base",
-    "storage_bucket": "dda-itd-base.appspot.com"
+    "project_number": "749923705331",
+    "firebase_url": "https://itd-dda-asg2-cf7d2-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "itd-dda-asg2-cf7d2",
+    "storage_bucket": "itd-dda-asg2-cf7d2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:546127168062:android:e0dc5cd973fe9a6ff5c76f",
+        "mobilesdk_app_id": "1:749923705331:android:251c732944d8a12b62f286",
         "android_client_info": {
-          "package_name": "com.ddaitd.base"
+          "package_name": "itd.dda.intodeep"
         }
       },
       "oauth_client": [
         {
-          "client_id": "546127168062-erk0cnlbl85uktaitm8f5okqjlrh4tql.apps.googleusercontent.com",
+          "client_id": "749923705331-apo597tt4suregqq5b5g17prtkfsqnnj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDvzz5bwq2E3r_dyJ5PQIHPk_KUas3p208"
+          "current_key": "AIzaSyAeCJyQK_rGv9Z9JEBeke04YfAASmAif9Y"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "546127168062-erk0cnlbl85uktaitm8f5okqjlrh4tql.apps.googleusercontent.com",
+              "client_id": "749923705331-apo597tt4suregqq5b5g17prtkfsqnnj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

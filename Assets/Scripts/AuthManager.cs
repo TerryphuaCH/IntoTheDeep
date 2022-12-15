@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 
-public class AuthManager : MonoBehaviour
+public class AuthManagers : MonoBehaviour
 {
     //Firebase references
     public FirebaseAuth auth;
