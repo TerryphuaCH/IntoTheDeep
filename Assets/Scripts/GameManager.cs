@@ -8,12 +8,17 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int rubbishNumber;
+    public TextMeshProUGUI ScoreText;
+   
 
     public void RubbishCounter()
     {
         rubbishNumber++;
         Debug.Log(rubbishNumber);
+        ScoreText.text = "Rubbish Collected: " +  rubbishNumber;
     }
+
+
 
 
     public void OnHover()
