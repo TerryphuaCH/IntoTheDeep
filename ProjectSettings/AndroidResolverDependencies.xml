@@ -72,7 +72,7 @@
   </files>
   <settings>
     <setting name="androidAbis" value="armeabi-v7a" />
-    <setting name="bundleId" value="dda.pixelstudio.intothedeep" />
+    <setting name="bundleId" value="dda.pixelstudio.intothedeeps" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
     <setting name="gradlePropertiesTemplateEnabled" value="False" />

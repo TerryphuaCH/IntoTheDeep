@@ -8,6 +8,7 @@ TagManager:
   - Right
   - Left
   - collect
+  - rubbish
   layers:
   - Default
   - TransparentFX

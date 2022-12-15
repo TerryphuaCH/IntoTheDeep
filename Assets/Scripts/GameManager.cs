@@ -7,8 +7,13 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public int rubbishNumber;
 
-
+    public void RubbishCounter()
+    {
+        rubbishNumber++;
+        Debug.Log(rubbishNumber);
+    }
 
 
     public void OnHover()
