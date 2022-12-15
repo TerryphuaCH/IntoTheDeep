@@ -52,8 +52,6 @@ public class AuthManagers : MonoBehaviour
             }
         });
 
-
-
     }
 
     private void InitializeFirebase()
