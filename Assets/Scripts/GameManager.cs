@@ -9,13 +9,22 @@ public class GameManager : MonoBehaviour
 {
     public int rubbishNumber;
     public TextMeshProUGUI ScoreText;
-   
+
+    public Text word;
+    public TextMeshProUGUI TrapText;
+
 
     public void RubbishCounter()
     {
         rubbishNumber++;
         Debug.Log(rubbishNumber);
         ScoreText.text = "Rubbish Collected: " +  rubbishNumber;
+    }
+
+    public void InPlace()
+    {
+        Debug.Log(word);
+        //ScoreText.text = "Rubbish Collected: " + rubbishNumber;
     }
 
 

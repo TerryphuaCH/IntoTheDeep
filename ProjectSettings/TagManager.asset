@@ -9,6 +9,7 @@ TagManager:
   - Left
   - collect
   - rubbish
+  - shark
   layers:
   - Default
   - TransparentFX
