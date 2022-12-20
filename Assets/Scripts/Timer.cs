@@ -17,9 +17,13 @@ public class Timer : MonoBehaviour
 
     public Text word;
     public TextMeshProUGUI TrapText;
+    
 
     public SimpleFirebaseManager firebaseMrg;
     public bool isPlayerStatUpdated;
+    public string uuid;
+    public string userName;
+   
 
     public TextMeshProUGUI timerMinutes;
     public TextMeshProUGUI timerSeconds;
@@ -31,6 +35,12 @@ public class Timer : MonoBehaviour
     private bool isRunning = false;
 
     // Use this for initialization
+
+
+
+
+
+
 
     public void TimerStart()
     {
@@ -47,7 +57,7 @@ public class Timer : MonoBehaviour
     public int score;
     public int time;
 
-    public void TimerStop(int score)
+    public void TimerStop(int score, int time)
     {
         if (isRunning)
         {
@@ -56,15 +66,15 @@ public class Timer : MonoBehaviour
             stopTime = timerTime;
 
             // Call the UpdatePlayerStat method here, passing in the score as an argument
-            UpdatePlayerStat(score);
-           
-         
+            UpdatePlayerStat(uuid,score, time,userName);
+
         }
     }
 
-    public void UpdatePlayerStat(int score )
+    public void UpdatePlayerStat(string uuid,int score,int time,string userName )
     {
-        firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, int.Parse(scoreText.text), int.Parse(timerMinutes.text), auth.GetCurrentUserDisplayName());
+        firebaseMrg.UpdatePlayerStats(uuid,score,time,userName);
+        //SimplePlayerStats playerStats = firebaseMrg.UpdatePlayerStats(uuid, score, time, userName);
     }
 
 

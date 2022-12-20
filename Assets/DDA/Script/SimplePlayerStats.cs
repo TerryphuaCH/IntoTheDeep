@@ -16,6 +16,7 @@ public class SimplePlayerStats
     public int highScore;
     public long updatedOn;
     public long createdOn;
+    public string uuid;
 
     //simple constructor
     public SimplePlayerStats()
@@ -23,7 +24,7 @@ public class SimplePlayerStats
 
     }
 
-    public SimplePlayerStats(string userName, int highScore, int totalTimeSpent)
+    public SimplePlayerStats(string uuid, int highScore, int totalTimeSpent, string userName)
     {
         this.userName = userName;
         this.highScore = highScore;

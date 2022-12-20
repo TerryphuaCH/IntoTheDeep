@@ -30,8 +30,9 @@ public class SimpleFirebaseManager : MonoBehaviour
     /// <param name="uuid"></param>
     /// <param name="highScore"></param>
     /// <param name="time"></param>
-    /// <param name="displayName"></param>
-    public void UpdatePlayerStats(string uuid, int highScore, int time, string displayName)
+    /// 
+    /// <param name="userName"></param>
+    public void UpdatePlayerStats(string uuid, int highScore, int time, string userName)
     {
         Query playerQuery = dbPlayerStatsReference.Child(uuid);
 
@@ -52,7 +53,7 @@ public class SimpleFirebaseManager : MonoBehaviour
                     //compare exisiting highscore and set new highscore
                     //add time spent -> this is dependent on your own timer
 
-                    //create a temp object sp which stoer info from player stats
+                    //create a temp object sp which storeinfo from player stats
                     SimplePlayerStats sp = JsonUtility.FromJson<SimplePlayerStats>(playerStats.GetRawJsonValue());
                     sp.highScore += highScore;
                     sp.totalTimeSpent += time;
@@ -60,6 +61,7 @@ public class SimpleFirebaseManager : MonoBehaviour
 
                     sp.highScore = highScore;
                     sp.totalTimeSpent = time;
+                    
 
 
                     sp.highScore = highScore;
@@ -74,9 +76,9 @@ public class SimpleFirebaseManager : MonoBehaviour
                 {
                     //CREATE Player stats
                     //if there;s no exisiting data, it is our first time player
-                    SimplePlayerStats sp = new SimplePlayerStats(displayName, highScore, time);
+                    SimplePlayerStats sp = new SimplePlayerStats(uuid, highScore, time, userName);
 
-                    SimpleLeaderBoard lb = new SimpleLeaderBoard(displayName, highScore);
+                    SimpleLeaderBoard lb = new SimpleLeaderBoard(userName, highScore);
 
                     //create new entries into firebase
                     dbPlayerStatsReference.Child(uuid).SetRawJsonValueAsync(sp.SimplePlayerStatsToJson());
