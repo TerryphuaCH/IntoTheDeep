@@ -35,7 +35,7 @@ public class SimpleFirebaseManager : MonoBehaviour
     public void UpdatePlayerStats(string uuid, int highScore, int time, string userName)
     {
         Query playerQuery = dbPlayerStatsReference.Child(uuid);
-
+        Debug.Log("hi0");
         //READ the data first and check whether there has been an enry based on my uuid
         playerQuery.GetValueAsync().ContinueWithOnMainThread(task =>
         {
