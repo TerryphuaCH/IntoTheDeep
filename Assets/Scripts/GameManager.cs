@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject panel;
 
     public int rubbishNumber;
+    public int time;
     public TextMeshProUGUI ScoreText;
 
     public Text word;
@@ -19,10 +20,6 @@ public class GameManager : MonoBehaviour
     public SimpleFirebaseManager firebaseMrg;
     public bool isPlayerStatUpdated;
 
-    public void UpdatePlayerStat(int score , int time)
-    {
-        firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, score, time, auth.GetCurrentUserDisplayName());
-    }
 
     //Add number of object collected to score
     public void RubbishCounter()
@@ -37,11 +34,17 @@ public class GameManager : MonoBehaviour
     {
         if(!isPlayerStatUpdated)
         {
-            UpdatePlayerStat(rubbishNumber, 0);
+            UpdatePlayerStat(rubbishNumber,time);
             Debug.Log("TerryPhua");
         }
+        isPlayerStatUpdated = true;
     }
-  
+
+    public void UpdatePlayerStat(int score, int time)
+    {
+        firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, score, time, auth.GetCurrentUserDisplayName());
+    }
+
     public void OnHover()
     {
         Debug.Log("Object inside cage");
