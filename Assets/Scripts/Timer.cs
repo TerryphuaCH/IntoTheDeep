@@ -47,7 +47,7 @@ public class Timer : MonoBehaviour
     public int score;
     public int time;
 
-    public void TimerStop(int score, int time)
+    public void TimerStop(int score)
     {
         if (isRunning)
         {
@@ -57,7 +57,7 @@ public class Timer : MonoBehaviour
 
             // Call the UpdatePlayerStat method here, passing in the score as an argument
             UpdatePlayerStat(score);
-            UpdatePlayerStat(time);
+           
          
         }
     }
