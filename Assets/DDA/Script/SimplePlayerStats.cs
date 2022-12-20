@@ -5,6 +5,12 @@ using System;
 
 public class SimplePlayerStats
 {
+    /*
+       * key: uuid
+         userName
+         highScore
+      */
+
     public string userName;
     public int totalTimeSpent;
     public int highScore;
@@ -17,10 +23,12 @@ public class SimplePlayerStats
 
     }
 
-    public SimplePlayerStats(string userName, int highScore)
+    public SimplePlayerStats(string userName, int highScore, int totalTimeSpent)
     {
         this.userName = userName;
         this.highScore = highScore;
+        this.totalTimeSpent = totalTimeSpent;
+ 
 
         var timestamp = this.GetTimeUnix();
         this.updatedOn = timestamp;

@@ -61,9 +61,7 @@ public class Timer : MonoBehaviour
 
     public void UpdatePlayerStat(int score)
     {
-        firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, int.Parse(scoreText.text), auth.GetCurrentUserDisplayName());
-
-
+        firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, int.Parse(scoreText.text), int.Parse(timerMinutes.text), auth.GetCurrentUserDisplayName());
     }
 
 
