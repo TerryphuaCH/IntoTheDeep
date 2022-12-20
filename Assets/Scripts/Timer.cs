@@ -37,11 +37,6 @@ public class Timer : MonoBehaviour
     // Use this for initialization
 
 
-
-
-
-
-
     public void TimerStart()
     {
         if (!isRunning)
@@ -71,12 +66,16 @@ public class Timer : MonoBehaviour
         }
     }
 
+    public void uasdas()
+    {
+        TimerStop(score, time);
+    }
+
     public void UpdatePlayerStat(string uuid,int score,int time,string userName )
     {
         firebaseMrg.UpdatePlayerStats(uuid,score,time,userName);
         //SimplePlayerStats playerStats = firebaseMrg.UpdatePlayerStats(uuid, score, time, userName);
     }
-
 
     // Update is called once per frame
     void Update()
