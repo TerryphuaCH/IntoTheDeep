@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         if(!isPlayerStatUpdated)
         {
             UpdatePlayerStat(rubbishNumber, 0);
+            Debug.Log("TerryPhua");
         }
     }
   
