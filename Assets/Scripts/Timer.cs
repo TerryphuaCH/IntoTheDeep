@@ -44,9 +44,10 @@ public class Timer : MonoBehaviour
 
 
 
-    int score;
+    public int score;
+    public int time;
 
-    public void TimerStop(int score)
+    public void TimerStop(int score, int time)
     {
         if (isRunning)
         {
@@ -56,10 +57,12 @@ public class Timer : MonoBehaviour
 
             // Call the UpdatePlayerStat method here, passing in the score as an argument
             UpdatePlayerStat(score);
+            UpdatePlayerStat(time);
+         
         }
     }
 
-    public void UpdatePlayerStat(int score)
+    public void UpdatePlayerStat(int score, int time = 0)
     {
         firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, int.Parse(scoreText.text), int.Parse(timerMinutes.text), auth.GetCurrentUserDisplayName());
     }

@@ -33,7 +33,7 @@ public class SimpleGamePlayer
         this.userName = userName;
         this.passWord = passWord;
         this.email = email;
-        this.highScore = highScore;
+      //this.highScore = highScore;
 
 
         //timestamp properties
