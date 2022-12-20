@@ -11,6 +11,7 @@ public class SimpleGamePlayer
     public long lastLoggedIn;
     public long createdOn;
     public long updatedOn;
+    public int highScore;
 
 
     //empty constructor
@@ -32,6 +33,7 @@ public class SimpleGamePlayer
         this.userName = userName;
         this.passWord = passWord;
         this.email = email;
+        this.highScore = highScore;
 
 
         //timestamp properties

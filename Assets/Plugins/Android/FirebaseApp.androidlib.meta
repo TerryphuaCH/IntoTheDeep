@@ -1,33 +1,79 @@
-fileFormatVersion: 2
-guid: 8acaa0e6ebf3826479031c7469c00b78
-folderAsset: yes
-PluginImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  iconMap: {}
-  executionOrder: {}
-  defineConstraints: []
-  isPreloaded: 0
-  isOverridable: 0
-  isExplicitlyReferenced: 0
-  validateReferences: 1
-  platformData:
-  - first:
-      Android: Android
-    second:
-      enabled: 1
-      settings: {}
-  - first:
-      Any: 
-    second:
-      enabled: 0
-      settings: {}
-  - first:
-      Editor: Editor
-    second:
-      enabled: 0
-      settings:
-        DefaultValueInitialized: true
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+Aero Frenzy
+Aero Guardian
+Aero Phantom
+Aero Spectre
+Artisan Bucky
+Artisan Foil
+Artisan Ghost
+Artisan Marshal
+Artisan Phantom
+Elderflame Vandal
+Forsaken Classic
+Forsaken Vandal
+Genesis Arc
+Genesis Bucky
+Genesis Bulldog
+Genesis Operator
+Genesis Shorty
+Goldwing Ares
+Goldwing Classic
+Goldwing Ghost
+Goldwing Judge
+Hydrodip Frenzy
+Hydrodip Guardian
+Hydrodip Judge
+Immortalized Guardian
+Immortalized Stinger
+Ion Phantom
+Karabasan Shorty
+Magepunk Ghost
+Nitro Guardian
+Nitro Odin
+Nitro Operator
+Nitro Vandal
+Oni Claw
+Piedra del Sol Bucky
+Piedra del Sol Ghost
+Prelude to Chaos Vandal
+Premiere Collision Classic
+Premiere Collision Marshal
+Prime Axe
+Prime//2.0 Karambit
+Protektor Sheriff
+Reaver Ghost
+Reaver Karambit
+Reaver Odin
+Reaver Operator
+Reaver Phantom
+Reaver Sheriff
+Reaver Spectre
+Reaver Vandal
+Recon Balisong
+Recon Phantom
+RGX 11z Pro Vandal
+Schema Odin
+Schema Sheriff
+Schema Stinger
+Shimmer Bulldog
+Shimmer Classic
+Shimmer Judge
+Shimmer Stinger
+Singularity Phantom
+Singularity Spectre
+Snakebite Shorty
+Sovereign Marshal
+Spitfire Ares
+Spitfire Ghost
+Spitfire Guardian
+Spitfire Operator
+Task Force 809 Frenzy
+Task Force 809 Knife
+Task Force 809 Marshal
+Task Force 809 Phantom
+Task Force 809 Spectre
+Varnish Bulldog
+Varnish Judge
+Varnish Sheriff
+Varnish Stinger
+Velocity Bulldog
+Velocity Phantom

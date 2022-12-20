@@ -240,7 +240,7 @@ public class AuthManager : MonoBehaviour
 
     public string GetCurrentUserDisplayName()
     {
-        displayNameText.text = auth.CurrentUser.DisplayName;
+        //displayNameText.text = auth.CurrentUser.DisplayName;
         return auth.CurrentUser.DisplayName;
     }
 

@@ -7,6 +7,20 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
 
+    public AuthManager auth;
+    public GameObject panel;
+
+    public TMP_Text scoreText;
+
+    public int rubbishNumber;
+    public TextMeshProUGUI ScoreText;
+
+    public Text word;
+    public TextMeshProUGUI TrapText;
+
+    public SimpleFirebaseManager firebaseMrg;
+    public bool isPlayerStatUpdated;
+
     public TextMeshProUGUI timerMinutes;
     public TextMeshProUGUI timerSeconds;
     public TextMeshProUGUI timerSeconds100;
@@ -28,14 +42,28 @@ public class Timer : MonoBehaviour
         }
     }
 
-    public void TimerStop()
+
+
+    int score;
+
+    public void TimerStop(int score)
     {
         if (isRunning)
         {
             print("STOP");
             isRunning = false;
             stopTime = timerTime;
+
+            // Call the UpdatePlayerStat method here, passing in the score as an argument
+            UpdatePlayerStat(score);
         }
+    }
+
+    public void UpdatePlayerStat(int score)
+    {
+        firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, int.Parse(scoreText.text), auth.GetCurrentUserDisplayName());
+
+
     }
 
 

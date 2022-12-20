@@ -7,27 +7,30 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public AuthManager auth;
+    public GameObject panel;
+
     public int rubbishNumber;
     public TextMeshProUGUI ScoreText;
 
     public Text word;
     public TextMeshProUGUI TrapText;
 
+    public SimpleFirebaseManager firebaseMrg;
+    public bool isPlayerStatUpdated;
 
+    public void UpdatePlayerStat(int score)
+    {
+        firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, score, auth.GetCurrentUserDisplayName());
+    }
+
+    //Add number of object collected to score
     public void RubbishCounter()
     {
         rubbishNumber++;
         Debug.Log(rubbishNumber);
         ScoreText.text = "Rubbish Collected: " +  rubbishNumber;
     }
-
-    public void InPlace()
-    {
-        Debug.Log(word);
-        //ScoreText.text = "Rubbish Collected: " + rubbishNumber;
-    }
-
-
 
 
     public void OnHover()
