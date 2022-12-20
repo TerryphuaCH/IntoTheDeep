@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour
     public bool isPlayerStatUpdated;
     public string uuid;
     public string userName;
-   
+    public long updateOn;
 
     public TextMeshProUGUI timerMinutes;
     public TextMeshProUGUI timerSeconds;
@@ -74,8 +74,17 @@ public class Timer : MonoBehaviour
     public void UpdatePlayerStat(string uuid,int score,int time,string userName )
     {
         firebaseMrg.UpdatePlayerStats(uuid,score,time,userName);
-        //SimplePlayerStats playerStats = firebaseMrg.UpdatePlayerStats(uuid, score, time, userName);
     }
+
+    public void UpdateLeaderBoard(string uuid,int score,long updatedOn)
+    {
+        firebaseMrg.UpdatePlayerLeaderBoardEntry(uuid, score, updateOn);
+    }
+
+
+
+
+
 
     // Update is called once per frame
     void Update()
