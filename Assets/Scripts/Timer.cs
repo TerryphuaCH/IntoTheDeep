@@ -81,10 +81,10 @@ public class Timer : MonoBehaviour
         firebaseMrg.UpdatePlayerLeaderBoardEntry(uuid, score, updateOn);
     }
 
-
-
-
-
+    public  void updateleader()
+    {
+        UpdateLeaderBoard(uuid,score,updateOn);
+    }
 
     // Update is called once per frame
     void Update()
