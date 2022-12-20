@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
     public SimpleFirebaseManager firebaseMrg;
     public bool isPlayerStatUpdated;
 
-    public void UpdatePlayerStat(int score)
+    public void UpdatePlayerStat(int score , int time)
     {
-        firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, score, auth.GetCurrentUserDisplayName());
+        firebaseMrg.UpdatePlayerStats(auth.GetCurrentUser().UserId, score, time, auth.GetCurrentUserDisplayName());
     }
 
     //Add number of object collected to score
