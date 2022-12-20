@@ -33,6 +33,14 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public void GameOver()
+    {
+        if(!isPlayerStatUpdated)
+        {
+            UpdatePlayerStat(rubbishNumber, 0);
+        }
+    }
+  
     public void OnHover()
     {
         Debug.Log("Object inside cage");
