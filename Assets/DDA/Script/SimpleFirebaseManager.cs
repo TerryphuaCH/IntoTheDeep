@@ -28,10 +28,10 @@ public class SimpleFirebaseManager : MonoBehaviour
     /// Update when there's exisiting entries
     /// </summary>
     /// <param name="uuid"></param>
-    /// <param name="score"></param>
+    /// <param name="highScore"</param>
     /// <param name="time"></param>
     /// <param name="displayName"></param>
-    public void UpdatePlayerStats(string uuid, int score, int time, string displayName)
+    public void UpdatePlayerStats(string uuid, int highScore, int time, string displayName)
     {
         Query playerQuery = dbPlayerStatsReference.Child(uuid);
 
@@ -54,16 +54,17 @@ public class SimpleFirebaseManager : MonoBehaviour
 
                     //create a temp object sp which stoer info from player stats
                     SimplePlayerStats sp = JsonUtility.FromJson<SimplePlayerStats>(playerStats.GetRawJsonValue());
-                    sp.highScore += score;
+                    sp.highScore += highScore;
                     sp.totalTimeSpent += time;
                     sp.updatedOn = sp.GetTimeUnix();
 
-                    //check if there is a new high score
-                    if (score > sp.highScore)
-                    {
-                        sp.highScore = score;
-                        UpdatePlayerLeaderBoardEntry(uuid, sp.highScore, sp.updatedOn);
-                    }
+                    sp.highScore = highScore;
+                    sp.totalTimeSpent = time;
+
+
+                    sp.highScore = highScore;
+                    UpdatePlayerLeaderBoardEntry(uuid, sp.highScore, sp.updatedOn);
+                    
 
                     //update with entire temp sp object
                     //path: playerstats/$uuid
@@ -73,9 +74,9 @@ public class SimpleFirebaseManager : MonoBehaviour
                 {
                     //CREATE Player stats
                     //if there;s no exisiting data, it is our first time player
-                    SimplePlayerStats sp = new SimplePlayerStats(displayName, score, time);
+                    SimplePlayerStats sp = new SimplePlayerStats(displayName, highScore, time);
 
-                    SimpleLeaderBoard lb = new SimpleLeaderBoard(displayName, score);
+                    SimpleLeaderBoard lb = new SimpleLeaderBoard(displayName, highScore);
 
                     //create new entries into firebase
                     dbPlayerStatsReference.Child(uuid).SetRawJsonValueAsync(sp.SimplePlayerStatsToJson());
