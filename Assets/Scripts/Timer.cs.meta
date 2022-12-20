@@ -3,7 +3,17 @@ guid: b3f5246962ed9c84cbe590288f314c9d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - auth: {instanceID: 0}
+  - panel: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - ScoreText: {instanceID: 0}
+  - word: {instanceID: 0}
+  - TrapText: {instanceID: 0}
+  - firebaseMrg: {instanceID: 0}
+  - timerMinutes: {instanceID: 0}
+  - timerSeconds: {instanceID: 0}
+  - timerSeconds100: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

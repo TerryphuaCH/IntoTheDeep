@@ -28,7 +28,7 @@ public class SimpleFirebaseManager : MonoBehaviour
     /// Update when there's exisiting entries
     /// </summary>
     /// <param name="uuid"></param>
-    /// <param name="highScore"</param>
+    /// <param name="highScore"></param>
     /// <param name="time"></param>
     /// <param name="displayName"></param>
     public void UpdatePlayerStats(string uuid, int highScore, int time, string displayName)
