@@ -44,6 +44,7 @@ public class Timer : MonoBehaviour
             print("START");
             isRunning = true;
             startTime = Time.time;
+            isPlayerStatUpdated = false;
         }
     }
 
@@ -59,9 +60,7 @@ public class Timer : MonoBehaviour
             print("STOP");
             isRunning = false;
             stopTime = timerTime;
-
-            // Call the UpdatePlayerStat method here, passing in the score as an argument
-            UpdatePlayerStat(uuid,score, time,userName);
+            isPlayerStatUpdated = true;
 
         }
     }
@@ -83,7 +82,7 @@ public class Timer : MonoBehaviour
 
     public  void updateleader()
     {
-        UpdateLeaderBoard(uuid,score,updateOn);
+        UpdateLeaderBoard(uuid, score, updateOn);
     }
 
     // Update is called once per frame

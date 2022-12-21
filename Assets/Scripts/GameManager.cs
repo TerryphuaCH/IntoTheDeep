@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public AuthManager auth;
     public GameObject panel;
+    public Time times;
 
     public int rubbishNumber;
     public int time;
@@ -32,12 +33,11 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if(!isPlayerStatUpdated)
-        {
-            UpdatePlayerStat(rubbishNumber,time);
-            Debug.Log("TerryPhua");
-        }
+        UpdatePlayerStat(this.rubbishNumber, time);
+        Debug.Log("TerryPhua");
         isPlayerStatUpdated = true;
+        SceneManager.LoadScene(2);
+
     }
 
     public void UpdatePlayerStat(int score, int time)
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchSceneToPlayerStats()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
 
     public void SwitchSceneToLeaderboard()
